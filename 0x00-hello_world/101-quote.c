@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- *main - Entry point
+ *main - print exactly and that piece of art is are is useful
  *
  *Return: Always 0 (Succuss)
  */
