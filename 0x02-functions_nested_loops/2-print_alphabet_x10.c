@@ -3,9 +3,9 @@
 /**
  * main - alphabet
  *
- * print_alphabet_x10 - print a - z ten tires
+ * print_alphabet - print a - z ten tires
  */
-void print_alphabet_x10(void)
+void print_alphabet(void)
 {
 	int i;
 	int j;
