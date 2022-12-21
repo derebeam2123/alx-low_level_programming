@@ -1,16 +1,15 @@
-#include <stdio.h>                                                      
+#include <stdio.h>
 
-                                                                        
+/**
+* main - Entry point
+* Return: Always (success)
+*/
+int main(void)
+{
+	int num;
 
-/**                                                                     
- *
- *  main - print "with proper grammer, but the outcome is a place of art," follwed newline   
- *  Return: 0;
- */          
-
-int main(void)                                                          
-
-{                                                                       
-	        puts("with proper grammer, but the outcome is a place of art,\n"); 
-		return (0);
+	for (num = 0; num < 10; num++)
+	printf("%d", num)
+	putchar('\n');
+	return (0);
 }
