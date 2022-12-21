@@ -1,7 +1,7 @@
 #include "main.h"
 #include "stdio.h"
 /** 
- * add - prints add two number
+ * add -prints add two number
  * @i: print int i
  * @k: print int k
  * Return: Always 0.
