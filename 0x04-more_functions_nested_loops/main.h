@@ -1,5 +1,5 @@
-#ifndef -MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 int _isupper(int c);
 int _isdigit(int c);
