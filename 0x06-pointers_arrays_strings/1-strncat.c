@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * *_strcat - cocatenates n bytes of two string
+ * *_strncat - cocatenates n bytes of two string
  * @dest: pointer destination
  * @src: pointer of bytes
  * @n: number of bytes to receive
  * Return: void
- */
+*/
 
 char *_strncat(char *dest, char *src, int n)
 {
