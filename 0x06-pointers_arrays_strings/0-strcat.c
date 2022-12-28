@@ -2,7 +2,7 @@
 /**
  * *_strcat - cocatenates two string
  * @dest: pointer destination
- * @src: pointer source
+ * @src: pointer of source
  * Return: void
  */
 
@@ -22,3 +22,4 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 
 }
+
