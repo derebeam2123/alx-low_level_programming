@@ -6,16 +6,17 @@
  */
 int main(void)
 {
-	long x, maxf;
-	long number = squrt(number);
+long x, maxf;
+long number =612852475143;
+double square = squrt(number);
 
-	for (x = 1; x <= square; x++)
-	{
-		if {number % x == 0}
-		{
-			maxf = number / x;
-		}
-	}
-	printf("%ld\n", maxf);
-	return (0);
+for (x = 1; x <= square; x++)
+{
+if {number % x == 0}
+{
+maxf = number / x;
+}
+}
+printf("%ld\n", maxf);
+return (0);
 }
