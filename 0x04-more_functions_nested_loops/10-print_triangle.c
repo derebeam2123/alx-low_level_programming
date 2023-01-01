@@ -2,24 +2,25 @@
 /**
  * print_triangle - function that prints a triangle
  * @size: size of the tiangle
- * Return:triangle '#'s
+ * Return: print always "#"
+ *
  */
 void print_triangle(int size)
 {
-int sp, ro, tr;
+int a, b, c;
 if (size <= 0)
 {
 _putchar('\n');
 }
 else
 {
-for (ro = 0; ro <= (size - 1); ro++)
+for (a = 0; a <= size; a++)
 {
-for (sp = 0; sp <= (size - 1) - ro; sp++)
+for (b = size - a; b > 1; b--)
 {
 _putchar(' ');
 }
-for (tr = 0; tr <= ro; tr++)
+for (c = 0; c <= a; c++)
 {
 _putchar('#');
 }
