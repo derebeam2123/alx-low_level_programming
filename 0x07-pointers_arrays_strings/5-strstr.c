@@ -7,7 +7,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-char *str1, *str2; /*declaring variables*/
+char *str1; *str2; /*declaring variables*/
 
 while (*haystack != '\0')
 {
@@ -22,7 +22,7 @@ str2++;
 }
 if (!*str2)
 return (str1);
-haystack = str + 1;
+haystack = str1 + 1;
 }
 return (0);
 }
