@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.>
+#include <stdio.h>
 /**
  * _strpbrk - prints the consecutve caracters of the are in s2.
  * @s: source string
