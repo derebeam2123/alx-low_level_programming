@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _puts - write function,  string, followe new line, to stdout.
+ * _strlen - function that returns the length of a string
  *
- * @str: This is my input string
+ * @s: This is my input string
  *
+ * Return: length of the string
  */
-void _puts(char *str)
+int _strlen(char *s);
 {
 	int index;
-
-	for (index = 0;	}
+	for (index = 0; s[index] != '\0' ; index++);
 	return (index);
 }
