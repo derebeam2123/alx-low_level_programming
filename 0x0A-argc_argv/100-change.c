@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - prints coints left
  * @args: paramatery entry
@@ -12,7 +12,7 @@ int main(int args, char *argv[])
 
 	if (args != 2)
 	{
-		printf("Error\n")
+		printf("Error\n");
 		return (1);
 	}
 	c = atoi(argv[1]);
@@ -35,7 +35,7 @@ int main(int args, char *argv[])
 			c -= 1;
 		else
 			break;
-		coin += 1;
+		coins += 1;
 	}
 	printf("%d\n", coins);
 	return (0);
