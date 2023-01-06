@@ -2,10 +2,10 @@
 #include <ctype.h>
 #include <string.h>
 /**
- * main - positve number
+ * main - adds positive numbers
  * @argc: argument count
- * @argv: array of vector
- * Return: return 0
+ * @argv: this is argument vector
+ * Return: 0;
  */
 int main(int argc, char *argv[])
 {
