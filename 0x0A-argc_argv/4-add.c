@@ -1,41 +1,26 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 /**
- * main - adds positive numbers
- * @argc: argument count
- * @argv: this is argument vector
- * Return: 0;
+ * check_num - adds positive numbers
+ * @str: argument count
+ *
+ * Return: 0 and 1,
  */
-int main(int argc, char *argv[])
+int check_num(char *str)
 {
-	int sum = 0, i;
+	unsigned int count;
 
-	if (argc > 1)
+	count = 0;
 
+	while (count < strlen(str))
 	{
-		for (i = 1; i < argc; i++)
+		if (!isdigit(str))
 		{
-			int b;
-
-			char *str;
-
-			str = argv[i];
-
-			for (b = 0; str[b] != '\0'; b++)
-			{
-				if  (str[b] < 48 || str[b] > 57)
-				{
-					printf("Error\n");
-					return (1);
-				}
-			}
+			return (0);
 		}
+		count++;
 	}
-	for  (i = 1; i < argc; i++)
-	{
-		sum += atoi(argv[i]);
-	}
-	printf("%d\n", sum);
-	return (0);
+	return (1);
 }
