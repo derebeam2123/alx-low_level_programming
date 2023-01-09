@@ -1,4 +1,5 @@
-#include "main.h"
+#include "stdlib.h"
+#include "holberton.h"
 /**
  * free_grid - allocates a grid
  * @grid: takes in width of grid
