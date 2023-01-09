@@ -1,10 +1,10 @@
-#include "stdlib.h"
-#include "holberton.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * free_grid - allocates a grid
  * @grid: takes in width of grid
  * @height: height
- * Return: free grid
+ * free grid
  */
 void free_grid(int **grid, int height)
 {
