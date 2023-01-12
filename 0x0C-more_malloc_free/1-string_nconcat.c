@@ -7,7 +7,7 @@
  * @n: number
  * Return: null
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n);
+char *string_nconcat(char *s1, char *s2, unsigned int n)<F11>
 {
 	char *concat;
 	unsigned int len = n, i;
