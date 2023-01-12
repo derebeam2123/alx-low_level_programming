@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * *_realloc - reallocate memory
  * @ptr: gtr
@@ -8,30 +9,34 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *nptr;
+	void *nptr;
+	char *ptr_copy, *filler;
 	unsigned int i;
 
 	if (new_size == old_size)
 		return (ptr);
-	if ((new_size == 0) && (ptr != NULL))
-	{
-		free(ptr);
-			return (NULL);
-	}
 	if (ptr == NULL)
 	{
 		nptr = malloc(new_size);
 		if (nptr == NULL)
 			return (NULL);
+		return (nptr);
 	}
-	if (new_size > old_size && (ptr != NULL))
+	if (new_size == 0 && ptr != NULL)
 	{
-		nptr = malloc(new_size);
-		if (nptr == NULL)
-			 return (nptr);
-		for (i = 0; i < old_size; i++)
-			nptr[i] = *((char *)ptr + 1);
 		free(ptr);
+		return (NULL);
 	}
+	ptr_copy = ptr;
+	nptr = malloc(sizeof(*ptr_copy) * new_size);
+		if (nptr == NULL)
+		{
+			free(ptr);
+			return (NULL);
+		}
+		filler = nptr;
+		for (i = 0; i < old_size && i < new_size; i++)
+			filler[i] = *ptr_copy++;
+		free(ptr);
 	return (nptr);
 }
