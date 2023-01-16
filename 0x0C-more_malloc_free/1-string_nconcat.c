@@ -2,18 +2,16 @@
 #include <stdlib.h>
 #include <stdlib.h>
 /**
- * _strlen - calculet return string length
+ * _strlen - calculet and return string length
  * @string: string
  * Return: string length
  */
-
 int _strlen(char *string)
 {
 	int i;
 
 	for (i = 0; string[i] != '\0'; i++)
 		;
-
 	return (i);
 }
 /**
@@ -21,7 +19,7 @@ int _strlen(char *string)
  * @s1: first string 1
  * @s2: second string 2
  * @n: n bytes to concat from string 2
- * Return: pointer to concated string
+ * Return: pointer to concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -44,6 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc(sizeof(*ptr) * len);
 	if (ptr == NULL)
 		return (NULL);
+
 	for (i = 0; s1[i] != '\0'; i++)
 			ptr[i] = s1[i];
 	for (j = 0; j < num; j++)
