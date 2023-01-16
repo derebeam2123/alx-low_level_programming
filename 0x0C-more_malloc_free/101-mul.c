@@ -39,7 +39,7 @@ int _strlen(char *s)
 void errors(void)
 {
 	printf("Errror\n");
-	exist(98);
+	exit(98);
 }
 /**
  * main - multiples
@@ -55,9 +55,9 @@ int main(int argc, char *argv[])
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
-	len = _strlen(s1);
-	len = _strlen(s2);
-	len = len1 + len + 1;
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	len = len1 + len2 + 1;
 	result = malloc(sizeof(int) * len);
 	if (!result)
 		return (1);
@@ -79,12 +79,12 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < len - 1; i++)
 	{
-		if (result[i]}
-				a = 1;
-				if (a)
-				_putchar(result[i] + '0');
-				}
-			if (!a)
+		if (result[i])
+			a = 1;
+		if (a)
+					_putchar(result[i] + '0');
+	}
+	if (!a)
 		_putchar('0');
 	_putchar('\n');
 free(result);
