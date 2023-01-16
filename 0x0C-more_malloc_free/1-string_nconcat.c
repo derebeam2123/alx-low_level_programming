@@ -6,20 +6,22 @@
  * @string: string
  * Return: string length
  */
+
 int _strlen(char *string)
 {
 	int i;
 
 	for (i = 0; string[i] != '\0'; i++)
 	       ;
-return (i);
+	return (i);
+
 }
 /**
  * string_nconcat - two string
  * @s1: first string
  * @s2: second string
  * @n: number
- * Return: pointer
+ * Return: pointer to concated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -46,7 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (i = 0; s1[i] != '\0'; i++)
 			ptr[i] = s1[i];
 	for (j = 0; j < num; j++)
-	ptr[i + j] = s2[j];
+		ptr[i + j] = s2[j];
 	ptr[i + j] = '\0';
 
 	return (ptr);
