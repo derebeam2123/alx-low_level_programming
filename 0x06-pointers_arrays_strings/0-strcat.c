@@ -1,11 +1,11 @@
 #include "main.h"
 /**
  * *_strcat - cocatenates two string
- * @dest: pointer destination
- * @src: pointer of source
+ * @dest: input value
+ * @src: input value
+ *
  * Return: void
  */
-
 char *_strcat(char *dest, char *src)
 {
 	int a = -1, i;
