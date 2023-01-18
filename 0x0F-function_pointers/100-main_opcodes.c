@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (bytes < 0)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(2);
 	}
 	arr = (char *)main;
 
@@ -32,11 +32,11 @@ int main(int argc, char *argv[])
 	{
 		if (i == bytes  - 1)
 		{
-			printf("102hhx\n", arr[i]);
+			printf("%02hhx\n", arr[i]);
 			break;
 
 	}
-	printf("102hhx\n", arry[i]);
+	printf("%02hhx\n", arr[i]);
 	}
 	return (0);
 }
