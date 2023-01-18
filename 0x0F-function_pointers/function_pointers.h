@@ -1,5 +1,5 @@
-#ifndef FUNCTION_POINT[RS_H
-#define FUNCTION_POINT[RS_H
+#ifndef FUNCTION_POINTERS_H
+#define FUNCTION_POINTERS_H
 
 #include <stdio.h>
 void print_name(char *name, void (*f)(char *));
