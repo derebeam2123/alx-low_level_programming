@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strncat - cocatenates n bytes of two string
+ * _strncat - cocatenates n bytes of two string
  * @dest: pointer destination
  * @src: pointer of bytes
  * @n: number of bytes to receive
@@ -10,16 +10,20 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int dest_len, i;
-
-	for (dest_len = 0; dest[dest_len] != '\0';)
-		dest_len++;
-
-	for (i = 0; i < n && src[i] != '\0';)
+	int j, i;
+	
+	i = 0;
+	while (dest[i] != '\0')
+	{
 		i++;
-	dest[dest_len + i] = src[i];
-	/*shuld end with a end of string char*/
-	dest[dest_len + i] = '\0';
-
+	}
+	j = 0;
+	while (j < n && src[j] != '\0')
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+	dest[i] = '\0';
 	return (dest);
 }
