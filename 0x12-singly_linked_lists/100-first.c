@@ -1,5 +1,5 @@
 #include <stdio.h>
-void _attribute_((constructor)) hard(void);
+void __attribute__((constructor)) hard(void);
 
 /**
  * hare - function executed before main
