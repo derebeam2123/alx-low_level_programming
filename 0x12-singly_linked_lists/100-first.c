@@ -1,12 +1,11 @@
 #include <stdio.h>
-void __attribute__((constructor)) hard(void);
+void __attribute__((constructor)) hare(void);
 
 /**
- * hare - function executed before main
- * Return: no return.
+ * hare - prints a string before.
  */
 
 void hare(void)
 {
-printf("You beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You beat! and yet, you must allow,\nI bore my house upon my back!\n");
 }
