@@ -2,7 +2,7 @@
 /**
  * print_dlistint - print element
  * @a: the head
- * Return: any number
+ * Return:  number
  */
 size_t print_dlistint(const dlistint_t *h)
 {
