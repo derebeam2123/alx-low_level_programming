@@ -18,8 +18,8 @@ int f4(char *usrn, int len)
 	while (vch < len)
 	{
 		if (ch < usrn[vch])
-			ch = usrn[vch]
-		vch += 1;
+			ch = usrn[vch];
+		ch += 1;
 	}
 	srand(ch ^ 14);
 	rand_num = rand();
@@ -76,7 +76,7 @@ int f6(char *usrn)
 int main(int argc, char **argv)
 {
 	char keygen[7];
-	int len, ch, vh;
+	int len, ch, vch;
 
 	long alph[] = {
 		0x3877445248432d41, 0x42394530534e6c37, 0x4d6e706762695432,
