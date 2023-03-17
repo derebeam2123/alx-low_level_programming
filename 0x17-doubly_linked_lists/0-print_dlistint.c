@@ -3,7 +3,7 @@
  * print_dlistint - prints all elements
  * @h: head of the list
  * Return: number
- */
+*/
 size_t print_dlistint(const dlistint_t *h)
 {
 	const dlistint_t *node = h;
