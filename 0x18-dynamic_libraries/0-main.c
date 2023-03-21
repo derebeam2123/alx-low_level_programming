@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-	print("%\n", _strlen("main"));
+	printf("%d\n", _strlen("main"));
 	return (0);
 }
