@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strcpy - Copiar el contenido de uno a otra variable
  * @dest: This is destiny

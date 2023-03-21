@@ -1,29 +1,21 @@
-/**
- *  * *_strncpy - program startup
- *   * @dest: first pointer being evaluated
- *    * @src: second pointer being evaluated
- *     * @n: int being evaluated
- *     (*
- *      * Description: copies two strings)?
- *       * Return: return (0) is the required function signature
- *        */
-
 #include "main.h"
+/**
+ * _strncpy - srting copy
+ * @dest: out put dest
+ * @src: input source
+ * @n: number
+ * Return: to 0 or 1
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
-		int length;
-
-			for (length = 0; length < n; length++)
-					{
-								dest[length] = src[length];
-										if (src[length] == '\0')
-													{
-																	while (length < n)
-																					{
-																										dest[length] = '\0';
-																														length++;
-																																	}
-																			}
-											}
-				return (dest);
+	int index;
+	for (index = 0; index < n && src[index] != '\0' ; index++)
+	{
+		dest[index] = src[index];
+	}
+	for (; index  < n; index++)
+	{
+		dest[index] = '\0';
+	}
+	return (dest);
 }

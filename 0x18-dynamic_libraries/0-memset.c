@@ -1,21 +1,17 @@
-/**
- *  * *_memset - program startup
- *   * @s: pointer being evaluated
- *    * @b: char being evaluated
- *     * @n: int being evaluated
- *     (*
- *      * Description: fills memory with a constant byte)?
- *       * Return: return (0) is the required function signature
- *        */
-
 #include "main.h"
+/**
+ * _memset - function as set
+ * @s: string
+ * @b: input string
+ * @n: number of bytes
+ * Return: 0 or any
+ */
 char *_memset(char *s, char b, unsigned int n)
 {
-		unsigned int byte;
-
-			for (byte = 0; byte < n; byte++)
-					{
-								s[byte] = b;
-									}
-				return (s);
+	unsigned int count;
+	for (count = 0; count < n ; count++)
+	{
+		s[count] = b;
+	}
+	return (s);
 }

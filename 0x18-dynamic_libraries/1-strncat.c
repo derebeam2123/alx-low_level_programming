@@ -1,27 +1,24 @@
-/**
- *  * *_strncat - program startup
- *   * @dest: first pointer being evaluated
- *    * @src: second pointer being evaluated
- *     * @n: first pointer being evaluated
- *     (*
- *      * Description: concatenates two strings)?
- *       * Return: return (0) is the required function signature
- *        */
-
 #include "main.h"
+/**
+ * _strncat - string of the cancatenate
+ * @dest: output dest
+ * @src: input source
+ * @n: numbert of byts
+ * Return:this return
+ */
 char *_strncat(char *dest, char *src, int n)
 {
-		int length;
-			int string;
-
-				for (length = 0; dest[length] != '\0'; length++)
-						{
-									continue;
-										}
-					for (string = 0; src[string] && string < n; string++)
-							{
-										dest[length++] = src[string];
-											}
-						dest[length] = '\0';
-							return (dest);
+	int index, count;
+	for (index = 0; dest[index] != '\0'; index++)
+		;
+	for (count = 0; count < n && src[count] != '\0'; count++)
+	{
+		dest[index] = src[count];
+		index++;
+	}
+	if (count < n)
+	{
+		dest[index] = '\0';
+	}
+	return (dest);
 }
