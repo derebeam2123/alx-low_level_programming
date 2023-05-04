@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - check the code
+ * _atoi - check the code
  *
  * Return: Always 0.
  */
-int main(void)
+int _atoi(void)
 {
 int nb;
 nb = _atoi("98");

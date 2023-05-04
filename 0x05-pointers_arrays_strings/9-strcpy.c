@@ -1,61 +1,30 @@
-#include "main.h"                                                   
+#include "main.h"
 
-/**                                                                 
+/**
+ * *_strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
  *
- *  * _atoi - convert string to an integer.                            
- *
- *   * @s: pointer to a character string.                               
- *
- *    *                                                                  
- *
- *     * Return: void.                                                    
- *
- *      */                                                                 
+ * Return: the pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
 
-int _atoi(char *s)                                                  
+	len = 0;
 
-{                                                                   
+	while (src[len] != '\0')
+	{
+		len++;
+	}
 
-	        int sign;                                                   
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
 
-		        unsigned int num;                                           
-
-			        char *temp;                                                 
-
-				                                                                    
-
-				        temp = s;                                                   
-
-					        num = 0;                                                    
-
-						        sign = i;                                                   
-
-							        while (*temp != '\0' && (*temp < '0' || *temp > '9'))       
-
-									        {                                                           
-
-											                if (*temp == '-')                                   
-
-														                        sign *= -1;                                 
-
-													                temp++;                                             
-
-															        }                                                           
-
-								        if (*temp != '\0')                                          
-
-										        {                                                           
-
-												                do {                                                
-
-															                        num = num * 10 + (*temp - '0');             
-
-																		                        temp++;                                     
-
-																					                } while (*temp >= '0' && <= '9');                   
-
-														        }                                                           
-
-									        return (num *sign);                                         
-
+	return (dest);
 }                    
