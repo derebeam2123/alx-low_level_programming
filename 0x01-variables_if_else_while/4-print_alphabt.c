@@ -1,12 +1,17 @@
 #include <stdio.h>
 
 /**
- * main - print "programing is like building ammulilingual"
- * puzzle, followde by a newline.
- * Return: 0,
+ * main - Entry point
+ *
+ * Return: 0
  */
 int main(void)
 {
-	puts("\"programing is like building ammulilingual");
+	char b;
+
+	for (b = 'a'; b <= 'z'; b++)
+		if (b != 'q' && b != 'e')
+			putchar(b);
+	putchar('\n');
 	return (0);
 }
