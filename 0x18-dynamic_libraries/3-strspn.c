@@ -1,23 +1,23 @@
 #include "main.h"
 /**
- * _strspn - length
- * @s: string
- * @accept: char
- * Return: 0 or 1
+ * _strspn - prints the consecutive caracters of s1 that are in s2.
+ * @s: source string
+ * @accept: searching string
+ *
+ * Return: new string.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	char *p = s;
-	char *o = accept;
-	int len = 0, i, k;
-	for (i = 0; p[i] != '\0'; i++)
-	{
-		if (len != i)
-			break;
-		for (k = 0; o[k] != '\0'; k++)
-		{
-			if (p[i] == o[k])
-				len++;
-		}
-	}
-	return (len);
+unsigned int i, j;
+for (j = 0; *(s + j); j++)
+{
+for (i = 0; *(accept + i); i++)
+{
+if (*(s + j) == *(accept + i))
+break;
+}
+if (*(accept + i) == '\0')
+break;
+}
+return (j);
+}

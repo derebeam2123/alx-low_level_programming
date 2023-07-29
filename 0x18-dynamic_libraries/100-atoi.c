@@ -1,45 +1,46 @@
 #include "main.h"
-#include <limits.h>
+
 /**
- * _atoi - convert to integer
- * @s: string
- * Return: integer
+ * _atoi - converts a string to an integer
+ * @s: string to be converted
+ *
+ * Return: the int converted from the string
  */
 int _atoi(char *s)
 {
-	int i, start, negative;
-	unsigned int number;
-	start = -1;
-	negative = 0;
-	number = 0;
-	for (i = 0; s[i] != '\0'; i++)
+	int i, d, n, len, f, digit;
+
+	i = 0;
+	d = 0;
+	n = 0;
+	len = 0;
+	f = 0;
+	digit = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (i < len && f == 0)
 	{
+		if (s[i] == '-')
+			++d;
+
 		if (s[i] >= '0' && s[i] <= '9')
-			start = i;
-		if (s[i] == '-' && start == -1)
 		{
-			if (negative)
-				negative = 0;
-			else
-				negative = 1;
-		}
-	}
-	if (start != -1)
-	{
-		for (i = 0; s[i] != '\0'; i++)
-		{
-			if (s[i] >= '0' && s[i] <= '9')
-				number = number * 10 + s[i] - '0';
-			else if (s[i - 1] >= '0' && s[i - 1] <= '9')
+			digit = s[i] - '0';
+			if (d % 2)
+				digit = -digit;
+			n = n * 10 + digit;
+			f = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
 				break;
+			f = 0;
 		}
+		i++;
 	}
-	if ((number >= (unsigned int) INT_MAX && negative == 0))
-		return (INT_MAX);
-	else if ((number > (unsigned int) INT_MAX && negative))
-		return (INT_MIN);
-	else if (negative)
-		return ((int) -number);
-	else
-		return ((int) number);
+
+	if (f == 0)
+		return (0);
+
+	return (n);
 }

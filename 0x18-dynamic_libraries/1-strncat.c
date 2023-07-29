@@ -1,24 +1,30 @@
 #include "main.h"
+
 /**
- * _strncat - string of the cancatenate
- * @dest: output dest
- * @src: input source
- * @n: numbert of byts
- * Return:this return
- */
+ * _strncat - cocatenates n bytes of two string
+ * @dest: pointer destination
+ * @src: pointer of bytes
+ * @n: number of bytes to receive
+ * Return: void
+*/
+
 char *_strncat(char *dest, char *src, int n)
 {
-	int index, count;
-	for (index = 0; dest[index] != '\0'; index++)
-		;
-	for (count = 0; count < n && src[count] != '\0'; count++)
+	int i;
+	int j;
+
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		dest[index] = src[count];
-		index++;
+		i++;
 	}
-	if (count < n)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		dest[index] = '\0';
+		dest[i] = src[j];
+		j++;
+		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
 }

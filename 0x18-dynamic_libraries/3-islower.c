@@ -1,15 +1,20 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * _islower - lower
- * @c: c
- * Return: 0
+ * _islower - short descriptio. single line
+ *  @c: contain value to be campared
+ *  Return: Always 0.
  */
 int _islower(int c)
+
 {
-	if ('a' <= c && c <= 'z')
+	if (c > 'a' && c < 'z')
 	{
 		return (1);
+
 	}
+
+
 	else
 	{
 		return (0);

@@ -1,37 +1,28 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 /**
- * _strpbrk - string
- * @s:string
- * @accept: byts
- * Return: 0 or 1
+ * _strpbrk - prints the consecutve caracters of the are in s2.
+ * @s: source string
+ * @accept: searching string
+ *
+ * Return: new string.
  */
 char *_strpbrk(char *s, char *accept)
 {
-	int i, k, pos, Z = 0;
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	pos = i;
-	for (i = 0; accept[i] != '\0'; i++)
-	{
-		for (k = 0; s[k] != '\0'; k++)
-		{
-			if (accept[i] == s[k])
-			{
-				if (k <= pos)
-				{
-					pos = k;
-					Z = 1;
-				}
-			}
-		}
-	}
-	if (Z == 1)
-	{
-		return (&s[pos]);
-	}
-	else
-	{
-		return (0);
-	}
+unsigned int i, j;
+for (i = 0; *(s + i); i++)
+{
+for (j = 0; *(accept + j); j++)
+{
+if (*(s + i) == *(accept + j))
+{
+break;
+}
+}
+if (*(accept + j) != '\0')
+{
+return (s + i);
+}
+}
+return (0);
 }
