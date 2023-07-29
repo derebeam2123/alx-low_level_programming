@@ -1,9 +1,0 @@
-#include "main.h"
-
-/**
-* -isupper.c - uppercase letters
-* @c: char to check
-* Return: 0 or 1
-*/
-int -isupper(int c)
-
