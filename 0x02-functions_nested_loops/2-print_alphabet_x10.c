@@ -1,22 +1,19 @@
 #include "main.h"
-
 /**
- * main - alphabet
- *
- * print_alphabet - print a - z ten tires
- */
-void print_alphabet(void)
+*print_alphabet_x10 - prints alphabet letters
+* ten times
+*desc: The function uses loop to operate
+*Return: no return
+*/
+void print_alphabet_x10(void)
 {
-	int i;
-	int j;
+int counter = 0;
+int letter;
+while (counter++ <= 9)
+{
+for (letter = 'a'; letter <= 'z'; letter++)
+_putchar(letter);
 
-	for (i = 0; i < 10; i++)
-	{
-
-		for (j = 'a'; j <= 'z'; j++)
-		{
-			_putchar(j);
-		}
-		_putchar('\n');
-	}
+_putchar(10);
+}
 }
